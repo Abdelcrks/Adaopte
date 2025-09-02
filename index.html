@@ -1,34 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script defer src="script.js"></script>
     <title>Adaopte</title>
 </head>
+
 <body>
-    <nav>
+    <nav class="nav">
         <!-- Logo Adaopte / accueil / guide de l'adoption / devenir bénévole / faire un don  -->
-         <h1>Adaopte</h1>
+        <h1 class="logo">
+            <img src="images/paws.png" width="24" height="24" alt="logo">
+            Adaopte
+        </h1>
+
+        <ul class="menu">
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"> <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /> <path d="M9 22V12h6v10" /> </svg>
+                    Accueil
+                </a>
+            </li>
+            <li>
+                <a href="/pages/j_adopte.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bone-icon lucide-bone"> <path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z" /> </svg>
+                    J'adopte
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fish-icon lucide-fish"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" /> <path d="M18 12v.5" /><path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" /> <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" /><path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4" /><path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98" /></svg>
+                    Guide de l'adoption
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"class="lucide lucide-squirrel-icon lucide-squirrel"><path d="M15.236 22a3 3 0 0 0-2.2-5" /><path d="M16 20a3 3 0 0 1 3-3h1a2 2 0 0 0 2-2v-2a4 4 0 0 0-4-4V4" /><path d="M18 13h.01" /><path d="M18 6a4 4 0 0 0-4 4 7 7 0 0 0-7 7c0-5 4-5 4-10.5a4.5 4.5 0 1 0-9 0 2.5 2.5 0 0 0 5 0C7 10 3 11 3 17c0 2.8 2.2 5 5 5h10" /></svg>
+                    Devenir bénévole
+                </a>
+            </li>
+            <button class="donation-btn">
+                Faire un don 🫶
+            </button>
     </nav>
     <header>
         <!-- Hero header (slogan et la photo , text) formulaire de recherche -->
-     </header>
+         <h1>DONNONS-LEUR AUTANT QU’ILS NOUS APPORTENT</h1>
+       <p>Chaque jour, des milliers d’animaux attendent une famille aimante, Trouvez votre compagnon idéal parmi nos animaux disponibles à l’adoption.</p>
+       <form>
+        <label for="pet-select">Type d'animal
+            <select name="pets" id="pet-select">
+                <option value="">Choisissez un animal</option>
+                <option value="dog">Chien</option>
+                <option value="cat">Chat</option>
+                <option value="rabbit">Lapin</option>
+                <option value="guineapig">Cochon d'inde</option>
+                <option value="fish">Poisson</option>
+            </select>
+        </label>
+            <input type="text" name="city" id="">
+            <button class="search">Rechercher🔍</button>
+        </label>
+       </form>
+    </header>
     <main>
         <section>
             <!-- Nos animaux à adopter + text + photos + voir tout les animaux  -->
+             <div id="text">
+                <h1>
+                        NOS ANIMAUX À ADOPTER
+                </h1>
+                <p>
+                    Découvrez en images tous nos animaux qui attendent une famille aimante. <br>
+                    Chaque photo raconte une histoire et un espoir.
+                </p>
+                <div id="pictures"></div>
+                <div id="other-animals">
+                    <button>Voir tous les animaux</button>
+                </div>
+             </div>
         </section>
         <section>
             <!-- comment ça marche + texte + div trouvez compagnon remplissez rencontrez etc etc  -->
+             <div id="text-two">
+                <h1>COMMENT ÇA MARCHE</h1>
+                <p>Adopter un animal est un engagement sérieux et à long terme. Voici notre processus d'adoption en <br>
+                    quelques étapes simples.
+                </p>
+             </div>
+             <div id="box-one">
+                <h1>🔍</h1>
+                <h2>1. Trouvez votre compagnon</h2>
+             </div>
+             <div id="box-two">
+                <p>📝</p>
+                <h1>Remplissez une demande</h1>
+             </div>
+             <div id="box-three">
+                <p>👋</p>
+                <h1>3. Rencontrez l'animal</h1>
+             </div>
+             <div id="box-four">
+                <p> 🏠</p>
+                <h1>4. Bienvenue à la maison</h1>
+             </div>
         </section>
         <section>
             <!-- prêt(e) à changer une vie ? adopter un animal etc  -->
+             <h1>PRÊT●E À CHANGER UNE VIE ?</h1>
+             <p>Adoptez, partagez, soutenez... Chaque geste compte. Que vous ouvriez votre foyer ou votre coeur,<br>
+                vous pouvez offrir une seconde chance à un animal abandonné.
+            </p>
+            <button>Adopter un animal</button>
+            <button>Faire un don 🫶</button>
+            <button>Devenir bénévole</button>
         </section>
     </main>
     <footer>
-        <!-- adaopte + text , informations utiles + text, contact + text -->
+            <!-- adaopte + text , informations utiles + text, contact + text -->
+             <div id="adaopte-footer">
+                <h1>ADAOPTE</h1>
+                <p>Notre mission est de trouver des foyers aimants pour <br>
+                    chaque animal abandonné et de promouvoir le bien être <br>
+                    animal.
+                </p>
+                <li>
+                    <ul>
+                        <button id="facebook">facebook</button>
+                    </ul>
+                    <ul>
+                        <button id="instagram">instagram</button>
+                    </ul>
+                    <ul>
+                        <button id="linkedin">linkedin</button>
+                    </ul><ul>
+                        <button id="twitch">twitch</button>
+                    </ul>
+                </li>
+            </div>
+            <div id="information-footer">
+                <h1>INFORMATIONS UTILES</h1>
+                <a href="#">FAQs</a>
+                <a href="#">Conseil d'adoption</a>
+                <a href="#">Nous contacter</a>
+                <a href="#">Mentions légales</a>
+            </div>
+            <div id="contact-footer">
+                <p> 
+                    116 Rue du Faubourg Saint-Martin <br>
+                    75010 Paris, France <br>
+                    Email: contact@adaopte.fr <br>
+                    Tél: +33 1 23 45 67 89
+                </p>
+            </div>
     </footer>
 </body>
+
 </html>
