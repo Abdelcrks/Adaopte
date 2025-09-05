@@ -103,9 +103,9 @@
             </form>
     </header>
     <main>
-        <section id="section-one">
+        <section>
             <!-- Nos animaux à adopter + text + photos + voir tout les animaux  -->
-            <div id="text">
+            <div class="text">
                 <h2>
                     NOS ANIMAUX À ADOPTER
                 </h2>
@@ -139,40 +139,50 @@
                     <button class="btn">Voir tous les animaux</button>
                 </div>
         </section>
-        <section>
+        <section id="section-box">
             <!-- comment ça marche + texte + div trouvez compagnon remplissez rencontrez etc etc  -->
-            <div id="text-two">
+            <div class="text">
                 <h2>COMMENT ÇA MARCHE</h2>
                 <p>Adopter un animal est un engagement sérieux et à long terme. Voici notre processus d'adoption en <br>
                     quelques étapes simples.
                 </p>
             </div>
-            <div id="box-one">
+            <div id="box-container">
+            <div class="box">
                 <h1>🔍</h1>
                 <h2>1. Trouvez votre compagnon</h2>
+                <p>Parcourez notre base de données d'animaux disponibles et utilisez nos filtres pour trouver celui qui correspond à votre mode de vie.</p>
             </div>
-            <div id="box-two">
-                <p>📝</p>
-                <h1>Remplissez une demande</h1>
+            <div class="box">
+                <h1>📝</h1>
+                <h2>Remplissez une demande</h2>
+                <p>Soumettez votre formulaire d'adoption pour l'animal qui vous intéresse. Nous examinerons chaque demande avec soin.</p>
             </div>
-            <div id="box-three">
-                <p>👋</p>
-                <h1>3. Rencontrez l'animal</h1>
+            <div class="box">
+                <h1>👋</h1>
+                <h2>3. Rencontrez l'animal</h2>
+                <p>Visitez le refuge pour rencontrer l'animal et voir si vous êtes compatibles. C'est une étape essentielle du processus.</p>
             </div>
-            <div id="box-four">
-                <p> 🏠</p>
-                <h1>4. Bienvenue à la maison</h1>
+            <div class="box">
+                <h1> 🏠</h1>
+                <h2>4. Bienvenue à la maison</h2>
+                <p>Une fois votre demande approuvée, vous pouvez accueilir votre nouvel ami chez vous. Nous restons disponibles pour vous conseiller.</p>
+            </div>
             </div>
         </section>
         <section>
             <!-- prêt(e) à changer une vie ? adopter un animal etc  -->
+             <div class="text"> 
             <h2>PRÊT●E À CHANGER UNE VIE ?</h2>
             <p>Adoptez, partagez, soutenez... Chaque geste compte. Que vous ouvriez votre foyer ou votre coeur,<br>
                 vous pouvez offrir une seconde chance à un animal abandonné.
             </p>
-            <button>Adopter un animal</button>
-            <button>Faire un don 🫶</button>
-            <button>Devenir bénévole</button>
+            <div id="btn-container">
+            <button class="btn" id="btn-adopt">Adopter un animal</button>
+            <button class="btn" id="don-btn">Faire un don 🫶</button>
+            <button class="btn" id="benevole-btn">Devenir bénévole</button>
+            </div>  
+            </div>
         </section>
     </main>
     <footer>
