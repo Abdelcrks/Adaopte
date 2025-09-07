@@ -24,7 +24,9 @@
     --container-width: 90%;
   }
 
-
+a{
+    text-decoration: none;
+}
 
 body{
     font-family: "Roboto", sans-serif;
@@ -33,7 +35,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
 
 
 /* NAVBAR */
@@ -77,8 +78,8 @@ body{
 .menu a {
     text-decoration: none;
     color: var(--heading-color);
-
 }
+
 .menu li a svg {
     margin: 0.5rem;
 }
@@ -96,6 +97,7 @@ body{
     height: 2.5rem;
     display: flex;
     align-items: center;
+    /* transition: 0.3s ease; */
 }
 
 .btn {
@@ -111,6 +113,7 @@ body{
 .donation-btn:hover {
     background-color: var(--btn-primary-bg);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* transform: translateY(-0.3rem); */
 }
 
 
@@ -191,7 +194,6 @@ label, #form-two label{
 
 #form-two input, #form-one select{
     padding: 0.7rem 3rem;
-    text-decoration: none;
     border-radius: 0.2rem;
     padding-left: 0.6rem;
     border: 1px solid #ddd;
@@ -328,9 +330,10 @@ main{
 
 #btn-container{
     display: flex;
-    margin: 2rem;
+    margin: 4rem 2rem;
     justify-content: center;
     gap: 1rem;
+
 }
 
 #don-btn{
@@ -348,5 +351,64 @@ main{
     padding: 1rem 1.3rem;
 }
 
+
 /* FOOTER */
+
+
+
+footer{
+    display: grid;
+    grid-row-start: 1fr 1fr 1fr;
+    grid-column-start: 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 1.5rem 3rem;
+}
+
+#adaopte-footer{
+    grid-column: 1;
+}
+
+.social-media{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-media a {
+    background-color:#484848 ;
+    display: flex;
+    border-radius: 50%;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.social-media a:hover{
+    background-color: var(--btn-secondary-bg);
+    transform: translateY(-0.3rem);
+}
+
+#information-footer{
+    grid-column: 2;
+}
+
+.information-link{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#information-footer a{
+    color: rgb(187, 187, 187);
+}
+
+#information-footer a:hover{
+    color: white;
+}
+
+#contact-footer{
+    grid-column: 3;
+}
+
+
+
 
