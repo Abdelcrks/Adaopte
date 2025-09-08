@@ -45,7 +45,6 @@ a{
 
 body{
     font-family: "Roboto", sans-serif;
-    /* background-color: blueviolet; */
     background-color: var(--light-color);
     margin: 0;
     padding: 0;
@@ -422,3 +421,12 @@ footer{
 #contact-footer{
     grid-column: 3;
 }
+
+
+/* -----------page j'adopte--------- */
+
+
+#form-adopte{
+    margin: 2rem auto;
+}
+
