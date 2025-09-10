@@ -35,7 +35,7 @@ form.addEventListener("submit", (event) => {
     const animal = select.value
     const city = input.value.trim()
 
-    const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city === city)
+    const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city.toLowerCase() === city.toLowerCase())
     
     if(resultInputAndSelect.length === 0){
              showNoResult()
@@ -55,5 +55,5 @@ form.addEventListener("submit", (event) => {
 
     location.href = url.toString()
 
-
+    
 })
