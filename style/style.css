@@ -451,6 +451,7 @@ footer{
     position: relative;           
     overflow: hidden;              
     border-radius: 16px;
+    box-shadow: var(--shadow-xl);
   }
 
   .card img {
@@ -459,3 +460,28 @@ footer{
     height: 240px;                  
     object-fit: cover;
   }
+
+
+/* --------- btn pagination-------- */
+
+#pagination{
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 2rem;
+}
+
+.btn-pagination{
+    background-color: #ffffff;
+    color: #ff6d39;
+    padding: 1.2rem 1.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.btn-pagination:hover{
+    background-color:#ff6d39 ;
+    color: #ffffff;
+}
