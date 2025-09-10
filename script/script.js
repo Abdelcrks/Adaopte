@@ -5,15 +5,10 @@ import { pets } from './pets.js'
 const form = document.querySelector("#form")
 const select = document.querySelector("#pet-select")
 const input = document.querySelector("#city-input")
-const result = document.querySelector("#result")
 
 console.log(form)
 console.log(select)
 console.log(input)
-console.log(result)
-
-
-
 
 
 // Message si pas de resultat//
@@ -27,7 +22,7 @@ const showNoResult = () => {
         
         const noResult = document.createElement("p")
         noResult.classList.add("no-result")
-        noResult.innerText = "Pas de résultat."
+        noResult.textContent = "Pas de résultat."
         form.appendChild(noResult)
 }
 
@@ -40,17 +35,17 @@ form.addEventListener("submit", (event) => {
     const animal = select.value
     const city = input.value.trim()
 
-    // const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city === city)
+    const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city === city)
     
-    // if(resultInputAndSelect.length === 0){
-    //          showNoResult()
-    //          return
-    // }
-
-    if (!animal || !city){
-        showNoResult()
-        return
+    if(resultInputAndSelect.length === 0){
+             showNoResult()
+             return
     }
+
+    // if (!animal || !city){
+    //     showNoResult()
+    //     return
+    // }
 
     const url = new URL("pages/j_adopte.html", location.href)
     url.searchParams.set("type", animal)
@@ -60,5 +55,5 @@ form.addEventListener("submit", (event) => {
 
     location.href = url.toString()
 
-})
 
+})
