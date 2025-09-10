@@ -40,16 +40,25 @@ form.addEventListener("submit", (event) => {
     const animal = select.value
     const city = input.value.trim()
 
-    const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city === city)
+    // const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city === city)
     
-    if(resultInputAndSelect.length === 0){
-             showNoResult()
-             return
+    // if(resultInputAndSelect.length === 0){
+    //          showNoResult()
+    //          return
+    // }
+
+    if (!animal || !city){
+        showNoResult()
+        return
     }
 
+    const url = new URL("pages/j_adopte.html", location.href)
+    url.searchParams.set("type", animal)
+    url.searchParams.set("city", city)
 
-    window.location.href= "pages/j_adopte.html"
+    // window.location.href= "pages/j_adopte.html"
 
+    location.href = url.toString()
 
 })
 
