@@ -8,8 +8,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script defer src="script.js"></script>
-    <title>Adaopte</title>
+        <script defer  type="module" src="/script/script.js"></script>
+        <title>Adaopte</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="pages/j_adopte.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-bone-icon lucide-bone">
@@ -86,21 +86,20 @@
             <p>Chaque jour, des milliers d’animaux attendent une famille aimante, Trouvez votre compagnon idéal parmi
                 nos animaux disponibles à l’adoption.</p>
         </div>
-            <form>
+            <form id="form">
                 <div id ="form-one">
                     <label for="pet-select">Type d'animal</label>
                         <select name="pets" id="pet-select">
                             <option value="">Choisissez un animal</option>
-                            <option value="dog">Chien</option>
-                            <option value="cat">Chat</option>
-                            <option value="rabbit">Lapin</option>
-                            <option value="guineapig">Cochon d'inde</option>
-                            <option value="fish">Poisson</option>
+                            <option value="Chien">Chien</option>
+                            <option value="Chat">Chat</option>
+                            <option value="Lapin">Lapin</option>
+                            <option value="Rongeur">Cochon d'inde</option>
                         </select>
                 </div>
                 <div id="form-two">
-                    <label for="city">Localisation</label>
-                    <input type="text" name="city" id="city" placeholder="Votre ville">
+                    <label for="city-input">Localisation</label>
+                    <input type="text" name="city" id="city-input" placeholder="Votre ville">
                 </div>
                     <button id="btn-search" class="btn">Rechercher 🔍</button>
             </form>

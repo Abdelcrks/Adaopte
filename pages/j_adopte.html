@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
-    <script defer src="script.js"></script>
+    <script defer  type="module" src="/script/script.js"></script>
     <title>J'adopte</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
             <div class="menu">
             <ul >
                 <li>
-                    <a href="index.html">
+                    <a href="../index.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-house-icon lucide-house">
@@ -78,28 +78,27 @@
         </nav>
     </nav>
     <header>
-        <form id="form-adopte">
+                <!--  formulaire de recherche -->
+        <form id="form" class="form-adopte">
             <div id ="form-one">
                 <label for="pet-select">Type d'animal</label>
                     <select name="pets" id="pet-select">
                         <option value="">Choisissez un animal</option>
-                        <option value="dog">Chien</option>
-                        <option value="cat">Chat</option>
-                        <option value="rabbit">Lapin</option>
-                        <option value="guineapig">Cochon d'inde</option>
-                        <option value="fish">Poisson</option>
+                        <option value="Chien">Chien</option>
+                        <option value="Chat">Chat</option>
+                        <option value="Lapin">Lapin</option>
+                        <option value="Rongeur">Cochon d'inde</option>
                     </select>
             </div>
             <div id="form-two">
-                <label for="city">Localisation</label>
-                <input type="text" name="city" id="city" placeholder="Votre ville">
+                <label for="city-input">Localisation</label>
+                <input id="city-input" type="text" name="city"  placeholder="Votre ville">
             </div>
                 <button id="btn-search" class="btn">Rechercher 🔍</button>
         </form>
-        <!--  formulaire de recherche -->
      </header>
     <main>
-        <section>
+        <section id="result">
             <!-- Nos animaux à adopter + text + photos + voir tout les animaux  -->
         </section>
 
