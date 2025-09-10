@@ -1,8 +1,5 @@
 import { pets } from './pets.js'
 
-
-
-
 const form = document.querySelector("#form")
 const sectionResult = document.querySelector("#result")
 const select = document.querySelector("#pet-select")
@@ -11,16 +8,21 @@ console.log(sectionResult)
 
 
 
+// ---------- pagination ----------//
+
+const next = document.querySelector("#next")
+const prev = document.querySelector("#prev")
 
 
-
-
-
+let data = pets
+let page = 1
+const perPage = 10
 
 
 
 const showCard = (list) => {
     sectionResult.textContent = ""
+
     list.forEach(pet => {
         const article = document.createElement("article")
         sectionResult.appendChild(article)
@@ -29,6 +31,7 @@ const showCard = (list) => {
         const img = document.createElement("img")
         article.appendChild(img)
         img.src = pet.imageUrl
+        img.alt = `${pet.name}, ${pet.type} ${pet.age}`
 
 
         const divOverlay = document.createElement("div")
@@ -59,6 +62,31 @@ const showCard = (list) => {
 }
 
 
+const renderPage = ()=>{
+    const start = (page - 1) * perPage // -1 car tblx commence à 0
+    const slice = data.slice(start, start + perPage)
+    showCard(slice)
+
+    prev.disabled = page === 1
+    next.disabled = start + perPage >= data.length
+
+}
+
+prev.addEventListener("click", () =>{
+    if(page >1 ){
+        page--
+        renderPage()
+    }
+})
+
+next.addEventListener("click", () =>{
+    if(page * perPage < data.length){
+        page++ 
+        renderPage()
+    }
+})
+
+
 const showNoResult = () => {
 
     const alreadyMsg = document.querySelector(".no-result")
@@ -73,45 +101,68 @@ const showNoResult = () => {
 }
 
 
+
+
+
+
 const params = new URLSearchParams(location.search)
 const type = params.get("type") || ""
 const city = (params.get("city") || "").trim()
 
 
-if (type) select.value = type
-if (city) input.value = city
+if (type){
+     select.value = type
+    }
+if (city){
+    input.value = city
+    } 
 
 
+// if (type && city) {
+//     const typeAndCity = pets.filter(pet => pet.type === type && pet.city === city)
+//     showCard(typeAndCity)
+// }else{
+//     showCard(pets)
+// }
 
 if (type && city) {
-    const typeAndCity = pets.filter(pet => pet.type === type && pet.city === city)
-    showCard(typeAndCity)
-}else{
-    showCard(pets)
-}
+    data = pets.filter(pet => pet.type === type && pet.city.toLowerCase()=== city.toLowerCase());
+    page = 1;
+  } else {
+    data = pets;
+    page = 1;
+  }
+  renderPage();
+
+
+
 
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
 
-
     const alreadyMsg = document.querySelector(".no-result")
     if (alreadyMsg) alreadyMsg.remove()
-
 
     const animal = select.value
     const city = input.value.trim()
 
-    const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city === city)
+    const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city.toLowerCase() === city.toLowerCase())
     
     if(resultInputAndSelect.length === 0){
             sectionResult.textContent=""
              showNoResult()
+             
+             prev.disabled = true
+             next.disabled = true
+
              return
     }
 
-    showCard(resultInputAndSelect)
+    data = resultInputAndSelect
+    page = 1
+    // showCard(resultInputAndSelect)
+
+    renderPage()
     
 })
-
-
