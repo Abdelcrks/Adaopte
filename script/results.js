@@ -50,6 +50,11 @@ const showCard = (list) => {
         const description = document.createElement("p")
         description.textContent = pet.description
         divOverlay.appendChild(description)
+
+        const btnAdopt = document.createElement("button")
+        btnAdopt.textContent = `Rencontrer`
+        btnAdopt.classList.add("btn")
+        divOverlay.appendChild(btnAdopt)
     })
 }
 
