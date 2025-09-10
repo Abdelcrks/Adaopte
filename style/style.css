@@ -442,8 +442,9 @@ footer{
     max-width: 90vw;
     display: grid;
     margin: auto;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 0.5fr));
+    padding: 2rem;
   }
 
 .card {
