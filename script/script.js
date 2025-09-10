@@ -15,15 +15,15 @@ console.log(input)
 
 const showNoResult = () => {
 
-        const alreadyMsg = document.querySelector(".no-result")
+    const alreadyMsg = document.querySelector(".no-result")
 
-        if (alreadyMsg)
-            alreadyMsg.remove()
-        
-        const noResult = document.createElement("p")
-        noResult.classList.add("no-result")
-        noResult.textContent = "Pas de résultat."
-        form.appendChild(noResult)
+    if (alreadyMsg)
+        alreadyMsg.remove()
+    
+    const noResult = document.createElement("p")
+    noResult.classList.add("no-result")
+    noResult.textContent = "Pas de résultat."
+    form.appendChild(noResult)
 }
 
 
