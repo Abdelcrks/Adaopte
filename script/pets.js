@@ -1,6 +1,4 @@
-export const pets = 
-
-[
+export const pets = [
     {
       "name": "Charlie",
       "age": "5 ans",
@@ -313,7 +311,4 @@ export const pets =
       "description": "Cookie est agile et joueur, parfait pour une petite famille attentive.",
       "imageUrl": "/images/gerbille.avif"
     }
-    
-  
-
   ]
