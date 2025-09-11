@@ -492,3 +492,81 @@ footer{
     background-color:#ff6d39 ;
     color: #ffffff;
 }
+
+
+
+/* benevole page */
+
+
+#hero-header-benevole{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),url(/images/alin-luna-8LfPXM6abRk-unsplash.jpg);
+    padding: 9rem;
+    background-size: cover;
+    background-position: center;
+    color: var(--light-color);
+    text-align: center;
+}
+
+ #hero-header-benevole h1{
+    font-family: 'Amatic SC';
+    font-size: 4rem;
+}
+
+#hero-header-benevole p{
+    font-size: 1.1rem ;
+    font-weight: 350;
+    max-width: 68rem;
+    margin: -2rem auto;
+}
+
+
+
+/* form */
+
+
+#form-inscription{
+    /* display: grid; */
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr;  */
+    background-color: var(--light-color);
+    padding: 20rem 10rem;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.08);
+    /* max-width: 53rem;  */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* align-items: center; */
+    flex-direction: column;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+#btn-benevole{
+    grid-column: 3;
+    margin-top: 1.2rem;
+    background-color: #00a652;
+}
+
+label, #form-two label{
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+#form-one{
+    grid-column: 1;
+    justify-self: center;
+}
+
+#form-two{
+    grid-column: 2;
+   justify-self: center;
+}
+
+#form-two input, #form-one select{
+    padding: 0.7rem 3rem;
+    border-radius: 0.2rem;
+    padding-left: 0.6rem;
+    border: 1px solid #ddd;
+
+}
