@@ -1,6 +1,5 @@
-import { pets } from './pets.js'
+// import { pets } from './pets.js'
 // console.log(pets);
-
 
 const form = document.querySelector("#form")
 const select = document.querySelector("#pet-select")
@@ -35,17 +34,20 @@ form.addEventListener("submit", (event) => {
     const animal = select.value
     const city = input.value.trim()
 
-    const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city.toLowerCase() === city.toLowerCase())
+    // const resultInputAndSelect = pets.filter(pet => pet.type === animal && pet.city.toLowerCase() === city.toLowerCase())
     
-    if(resultInputAndSelect.length === 0){
-             showNoResult()
-             return
-    }
 
-    // if (!animal || !city){
-    //     showNoResult()
-    //     return
+
+
+    // if(resultInputAndSelect.length === 0){
+    //          showNoResult()
+    //          return
     // }
+
+    if (!animal || !city){
+        showNoResult()
+        return
+    }
 
     const url = new URL("pages/j_adopte.html", location.href)
     url.searchParams.set("type", animal)
@@ -55,5 +57,5 @@ form.addEventListener("submit", (event) => {
 
     location.href = url.toString()
 
-    
+
 })
