@@ -1,4 +1,3 @@
-import { pets } from './pets.js'
 
 const form = document.querySelector("#form")
 const sectionResult = document.querySelector("#result")
@@ -13,7 +12,7 @@ console.log(sectionResult)
 const next = document.querySelector("#next")
 const prev = document.querySelector("#prev")
 
-
+let pets = []
 let data = pets
 let page = 1
 const perPage = 10
@@ -62,6 +61,7 @@ const showCard = (list) => {
 }
 
 
+
 const renderPage = ()=>{
     const start = (page - 1) * perPage // -1 car tblx commence à 0
     const slice = data.slice(start, start + perPage)
@@ -87,6 +87,8 @@ next.addEventListener("click", () =>{
 })
 
 
+// pas de resultats
+
 const showNoResult = () => {
 
     const alreadyMsg = document.querySelector(".no-result")
@@ -102,30 +104,25 @@ const showNoResult = () => {
 
 
 
+const loadPetsAndInit = async () => {
+    try {
+
+        const response = await fetch("../data/pets.json")
+        pets = await response.json()
+
+        const params = new URLSearchParams(location.search)
+        const type = params.get("type") || ""
+        const city = (params.get("city") || "").trim()
+
+        if (type){
+            select.value = type 
+        }
+        if (city){
+            input.value = city 
+        }
 
 
-
-const params = new URLSearchParams(location.search)
-const type = params.get("type") || ""
-const city = (params.get("city") || "").trim()
-
-
-if (type){
-     select.value = type
-    }
-if (city){
-    input.value = city
-    } 
-
-
-// if (type && city) {
-//     const typeAndCity = pets.filter(pet => pet.type === type && pet.city === city)
-//     showCard(typeAndCity)
-// }else{
-//     showCard(pets)
-// }
-
-if (type && city) {
+    if (type && city) {
     data = pets.filter(pet => pet.type === type && pet.city.toLowerCase()=== city.toLowerCase());
     page = 1;
   } else {
@@ -134,6 +131,13 @@ if (type && city) {
   }
   renderPage();
 
+
+    } catch (error) {
+        console.log(error, 'erreur')
+    }
+}
+
+loadPetsAndInit()
 
 
 
@@ -161,7 +165,6 @@ form.addEventListener("submit", (event) => {
 
     data = resultInputAndSelect
     page = 1
-    // showCard(resultInputAndSelect)
 
     renderPage()
     
