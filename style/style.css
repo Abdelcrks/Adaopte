@@ -167,7 +167,7 @@ footer{
 }
 
 
-form{
+#form{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     background-color: var(--light-color);
@@ -393,6 +393,7 @@ footer{
     padding: 0.6rem;
     cursor: pointer;
     transition: 0.3s ease;
+    color: white;
 }
 
 .social-media a:hover{
@@ -426,12 +427,14 @@ footer{
 
 /* ---- message form error---- */
 
-.no-result{
-
-}
 
 /* -----------page j'adopte--------- */
 
+
+
+#div-header{
+    margin-top: 5rem;
+}
 
 .form-adopte{
     margin: 2rem auto;
@@ -507,7 +510,7 @@ footer{
     text-align: center;
 }
 
- #hero-header-benevole h1{
+ #hero-header-benevole h1{ 
     font-family: 'Amatic SC';
     font-size: 4rem;
 }
@@ -525,48 +528,72 @@ footer{
 
 
 #form-inscription{
-    /* display: grid; */
-    display: flex;
-    /* grid-template-columns: 1fr 1fr 1fr;  */
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     background-color: var(--light-color);
-    padding: 20rem 10rem;
+    padding: 1.5rem;
     position: relative;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.08);
-    /* max-width: 53rem;  */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* align-items: center; */
-    flex-direction: column;
     color: #333;
     font-weight: bold;
     margin-bottom: 4rem;
+    width: 100%;
+    margin-top: -4rem;
+    margin: auto;
+    align-items: center;
+    }
+
+
+#form-inscription h2{
+    font-family: 'Amatic SC';
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    grid-row: 1;
+}
+#form-inscription p{
+    font-family: 'Roboto',sans-serif;
+    text-align: center;
+    color: #6c6c6c;
+    font-weight: 400;
+    grid-row: 2;
 }
 
-#btn-benevole{
-    grid-column: 3;
-    margin-top: 1.2rem;
-    background-color: #00a652;
+
+.obligatoire{
+    color: red;
 }
 
-label, #form-two label{
-    display: block;
-    margin-bottom: 0.3rem;
-}
-
-#form-one{
-    grid-column: 1;
-    justify-self: center;
-}
-
-#form-two{
-    grid-column: 2;
-   justify-self: center;
-}
-
-#form-two input, #form-one select{
+#form-inscription input , #form-inscription select{
     padding: 0.7rem 3rem;
     border-radius: 0.2rem;
     padding-left: 0.6rem;
     border: 1px solid #ddd;
-
 }
+
+#first-container{
+    grid-row: 3;
+}
+
+#second-container{
+    grid-row: 4;
+}
+
+#third-container{
+    grid-row:5;
+}
+#four-container{
+    grid-row: 6;
+}
+#five-container{
+    grid-row: 7;
+}
+
+#btn-benevole{
+    margin-top: 1.2rem;
+    background-color: #00a652;
+    grid-row: 8;
+}
+
+
+

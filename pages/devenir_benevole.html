@@ -84,18 +84,43 @@
         </div>
     </header>
     <main>
-        <section>
+        <section id="section-form">
             <form id="form-inscription">
-                <h3>Formulaire d'inscription</h3>
+                <h2>Formulaire d'inscription</h2>
                 <p>Remplissez ce formulaire pour rejoindre notre réseau de bénévoles. Nous vous contacterons rapidement pour vous présenter les prochaines étapes.</p>
-                <div id ="form-one">
-                    <label for="pet-select">Type d'animal</label>
-                </div>
-                <div id="form-two">
-                    <label for="city-input">Localisation</label>
-                    <input type="text" name="city" id="city-input" placeholder="Votre ville">
-                </div>
+                    <div id="first-container" >
+                    <label for="prenom">Prénom <span class="obligatoire">*</span></label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom">
+
+                    <label for="nom">Nom <span class="obligatoire">*</span></label>
+                    <input type="text" name="nom" id="nom" placeholder="Votre nom">
+                    </div>
+                    <div id="second-container">
+                    <label for="mail">Adresse Email <span class="obligatoire">*</span></label>
+                    <input type="email" name="mail" id="mail" placeholder="exemple@mail.com">
+                    </div>
+                    <div id="third-container">
+                    <label for="ville">Ville <span class="obligatoire">*</span></label>
+                    <input type="text" name="ville" id="ville" placeholder="Votre ville">
+                    
+                    <label for="postcode">Code postal <span class="obligatoire">*</span></label>
+                    <input type="number" name="postcode" id="postcode" placeholder="Code postal">
+                    </div>
+                    <div id="four-container">
+                    <label for="disponibilites">Disponibilités <span class="obligatoire">*</span></label>
+                    <select name="disponibilites" id="disponibilites">
+                        <option value="">Séléctionnez vos disponibilités</option>
+                        <option value="matin">9h - 10H</option>
+                        <option value="midi">12h - 13h</option>
+                        <option value="apres-midi">15h - 16h</option>
+                    </select>
+
+                    <label for="motivation">Votre motivation <span class="obligatoire">*</span></label>
+                    <input type="text" name="motivation" id="motivation" placeholder="Parlez-nous de votre motivation à devenir bénévole chez Adaopte...">
+                    </div>
+                    <div id="five-container">
                     <button id="btn-benevole" class="btn">Envoyer ma candidature</button>
+                    </div>
             </form>
         </section>
         <section>
