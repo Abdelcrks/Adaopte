@@ -7,7 +7,6 @@ console.log(sectionResult)
 
 
 
-// ---------- pagination ----------//
 
 const next = document.querySelector("#next")
 const prev = document.querySelector("#prev")
