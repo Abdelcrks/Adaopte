@@ -46,3 +46,7 @@ JavaScript (ES6) — fetch JSON, DOM, pagination, URLSearchParams
 Données — data/pets.json
 
 Dev local — Live Server (VS Code) ou simple serveur statique
+
+
+#### 🌐 Démo en ligne
+https://adaopte-eight.vercel.app/
